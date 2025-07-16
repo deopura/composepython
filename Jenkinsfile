@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 // Check the docker-compose version
-                sh 'docker compose --version'
+                sh 'docker compose version'
                 // Bring up the services
                 sh 'docker compose up -d'
                 // Ensure the services are running
