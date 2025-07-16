@@ -18,6 +18,7 @@ RUN curl -L "https://github.com/docker/compose/releases/download/v2.26.1/docker-
     ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 # Optional: Allow Jenkins user to run docker
+RUN groupadd docker && usermod -aG docker jenkins
 RUN usermod -aG docker jenkins
 
 USER jenkins
