@@ -9,8 +9,7 @@ pipeline {
                 sh 'docker compose version'
                 // Bring up the services
                 //sh 'su devops'
-                sh 'docker compose build'
-                // Ensure the services are running
+                sh 'docker compose up -d'               // Ensure the services are running
                 //sh 'docker compose ps'
             }
         }
@@ -22,6 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'docker compose psßßß'
             }
         }
     }
