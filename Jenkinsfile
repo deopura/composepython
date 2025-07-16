@@ -6,11 +6,11 @@ pipeline {
             steps {
                 echo 'Building..'
                 // Check the docker-compose version
-                sh 'docker-compose --version'
+                sh 'docker compose --version'
                 // Bring up the services
-                sh 'docker-compose up -d'
+                sh 'docker compose up -d'
                 // Ensure the services are running
-                sh 'docker-compose ps'
+                sh 'docker compose ps'
             }
         }
         stage('Test') {
