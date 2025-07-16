@@ -8,7 +8,7 @@ pipeline {
                 // Check the docker-compose version
                 sh 'docker compose version'
                 // Bring up the services
-                sh 'su devops'
+                //sh 'su devops'
                 sh 'docker compose build'
                 // Ensure the services are running
                 //sh 'docker compose ps'
